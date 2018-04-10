@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+    <navigation-bar></navigation-bar>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
       <router-view></router-view>
     </main>
   </div>
 </template>
 
 <script>
+import NavigationBar from '@/components/NavigationBar'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {NavigationBar},
 }
 </script>
 
@@ -28,17 +30,13 @@ body {
   color: #2c3e50;
 }
 
-main {
-  text-align: center;
-  margin-top: 40px;
+.profile-image {
+  width: 100%;
+  height: 500px;
 }
 
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
+main {
+  text-align: center;
 }
 
 header span {
